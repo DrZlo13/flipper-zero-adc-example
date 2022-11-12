@@ -1,0 +1,13 @@
+App(
+    appid="adc_example",
+    name="ADC Example",
+    apptype=FlipperAppType.PLUGIN,
+    entry_point="adc_example_app",
+    requires=[
+        "gui",
+    ],
+    stack_size=4 * 1024,
+    order=20,
+    fap_icon="unknown_10px.png",
+    fap_category="Misc",
+)
