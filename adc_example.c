@@ -155,7 +155,7 @@ int32_t adc_example_app(void* p) {
     UNUSED(p);
 
     // PC3 is ADC1_IN4
-    furi_hal_gpio_init(&gpio_ext_pc3, GpioModeAnalog, GpioPullDown, GpioSpeedLow);
+    furi_hal_gpio_init(&gpio_ext_pc3, GpioModeAnalog, GpioPullNo, GpioSpeedLow);
     FURI_LOG_I(TAG, "Gpio Set OK");
 
     furi_hal_adc_init();
