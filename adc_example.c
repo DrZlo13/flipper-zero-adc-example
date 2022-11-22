@@ -17,11 +17,11 @@ void furi_hal_adc_set_vref(FuriHalVref vref) {
     switch(vref) {
     case FuriHalVref2048:
         LL_VREFBUF_SetVoltageScaling(LL_VREFBUF_VOLTAGE_SCALE0);
-        trim_value = ((uint32_t)*VREFBUF_SC0_CAL_ADDR) & 0x3FU;
+        trim_value = LL_VREFBUF_SC0_GetCalibration() & 0x3FU;
         break;
     case FuriHalVref2500:
         LL_VREFBUF_SetVoltageScaling(LL_VREFBUF_VOLTAGE_SCALE1);
-        trim_value = ((uint32_t)*VREFBUF_SC1_CAL_ADDR) & 0x3FU;
+        trim_value = LL_VREFBUF_SC1_GetCalibration() & 0x3FU;
         break;
     }
 
