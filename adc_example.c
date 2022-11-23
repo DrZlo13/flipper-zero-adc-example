@@ -177,5 +177,11 @@ int32_t adc_example_app(void* p) {
         furi_delay_ms(10);
     }
 
+    furi_hal_adc_disable();
+    FURI_LOG_I(TAG, "ADC Disable OK");
+
+    furi_hal_adc_deinit();
+    FURI_LOG_I(TAG, "ADC Deinit OK");
+
     return 0;
 }
