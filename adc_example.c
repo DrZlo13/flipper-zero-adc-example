@@ -29,6 +29,7 @@ void furi_hal_adc_set_vref(FuriHalVref vref) {
 }
 
 void furi_hal_adc_init() {
+    furi_hal_bus_enable(FuriHalBusADC);
     LL_VREFBUF_Enable();
     LL_VREFBUF_DisableHIZ();
 
